@@ -1,0 +1,50 @@
+$font-family-base-default:    'Nunito Sans', sans-serif !default;
+$font-family-base-pattern:    Roboto !default;
+
+$font-size-base:              1rem !default;
+$font-size-lg:                ($font-size-base * 1.25) !default;
+$font-size-sm:                ($font-size-base * .875) !default;
+
+$h1:                          40px !default;
+$h1Mobile:                    32px !default;
+$h2:                          32px !default;
+$h2Mobile:                    26px !default;
+$h3:                          24px !default;
+$h3Mobile:                    22px !default;
+$h4:                          18px !default;
+$h4Mobile:                    16px !default;
+$h5:                          16px !default;
+$h6:                          15px !default;
+$p1:                          18px !default;
+$p1Mobile:                    16px !default;
+$p2:                          16px !default;
+$p2Mobile:                    14px !default;
+$p3:                          14px !default;
+$p3Mobile:                    12px !default;
+$p4:                          12px !default;
+$p5:                          10px !default;
+$p6:                          10px !default;
+
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5 !default;
+
+$spacer: 1rem !default;
+
+$headings-margin-bottom:      ($spacer / 2) !default;
+$headings-font-weight:        500 !default;
+$headings-line-height:        1.2 !default;
+
+$display1-size:               6rem !default;
+$display2-size:               5.5rem !default;
+$display3-size:               4.5rem !default;
+$display4-size:               3.5rem !default;
+
+$display1-weight:             300 !default;
+$display2-weight:             300 !default;
+$display3-weight:             300 !default;
+$display4-weight:             300 !default;
+$display-line-height:         $headings-line-height !default;

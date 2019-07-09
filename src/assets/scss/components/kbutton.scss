@@ -1,0 +1,69 @@
+.k-button {
+
+  @each $brand, $value-brand in $states-array-brand {
+
+    @each $name, $value in $value-brand {
+      $color: nth($value, 1);
+      $invert-color: nth($value, 2);
+      $shadow: nth($value, 3);
+
+
+      //@each $color, $value in $theme-colors {
+      //  .btn-#{$color} {
+      //    @include button-variant($value, $value);
+      //  }
+      //}
+
+      &.is-#{$name}-#{$brand} {
+
+        //@include button-variant($color, $color);
+
+        color: $invert-color;
+        background-color: $color;
+        border-color: $color;
+        &:hover{
+          box-shadow: 0 0 0 0.1rem $shadow
+        }
+        &:focus{
+          box-shadow: 0 0 0 0.2rem $shadow;
+        }
+        &:active{
+          border-color: $color;
+          box-shadow: 0 0 0 0.2rem $shadow;
+          &:focus{
+            box-shadow: 0 0 0 0.2rem $shadow;
+          }
+        }
+
+        &.is-outlined{
+          color: $color;
+          background-color: transparent;
+          border-color: $color;
+          &:active{
+            color: $invert-color;
+            background-color: $color;
+            border-color: $color;
+            box-shadow: 0 0 0 0.2rem $shadow;
+            &:focus{
+              box-shadow: 0 0 0 0.2rem $shadow;
+
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+
+  &.is-transparent {
+    border: 0 !important;
+    background-color: transparent !important;
+    &:active {
+      outline:0 !important;
+    }
+    &:focus {
+      outline:0 !important;;
+    }
+  } 
+}

@@ -1,0 +1,122 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
+
+// Cores
+$black: hsl(0, 0%, 4%);
+$grey-darker: hsl(0, 0%, 13%);
+$grey: hsl(0, 0%, 44%);
+$grey-lighter: hsl(0, 0%, 87%);
+$white: hsl(0, 0%, 100%);
+$ice: hsl(240, 30%, 95%);
+$orange: hsl(14, 100%, 53%);
+$yellow: hsl(48, 100%, 67%);
+$green: hsl(80, 60%, 50%);
+$turquoise: hsl(171, 100%, 41%);
+$cyan: hsl(204, 86%, 53%);
+$blue: hsl(203, 49%, 50%);
+$purple: hsl(271, 100%, 71%);
+$red: hsl(354, 100%, 50%);
+$violet: hsl(280, 100%, 30%);
+
+// Shadow
+$black-shadow: hsl(0, 0%, 4%);
+$grey-darker-shadow: hsl(0, 0%, 24%);
+$grey-shadow: hsl(0, 0%, 65%);
+$grey-lighter-shadow: hsl(0, 0%, 98%);
+$white-shadow: hsl(0, 0%, 100%);
+$ice-shadow: hsl(240, 30%, 95%);
+$orange-shadow: hsla(14, 100%, 53%, 0.84);
+$yellow-shadow: hsla(48, 100%, 67%, 0.76);
+$green-shadow: hsl(77, 77%, 55%);
+$turquoise-shadow: hsla(171, 100%, 41%, 0.51);
+$cyan-shadow: hsla(204, 86%, 53%, 0.66);
+$blue-shadow: hsla(203, 49%, 50%, 0.7);
+$purple-shadow: hsla(271, 100%, 71%, 0.52);
+$red-shadow: hsla(354, 100%, 50%, 0.56);
+$violet-shadow: hsla(280, 100%, 30%, 0.6);
+
+// States
+$primary:#3E75C8;
+$secondary:#7D97AD;
+$ternary: #0185CD;
+$info: $cyan;
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+$dark: $grey-darker;
+$text: $grey-darker;
+$bg-primary-default: linear-gradient(90deg, $primary 0%, $ternary 100%);
+
+// ( color , invert-color, shadow)
+$states-default: (
+  "white": ($white, $black, $grey-shadow),
+  "black": ($black, $white, $black-shadow),
+  "dark": ($dark, $white, $grey-darker-shadow),
+  "light": ($white, $white, $grey-lighter-shadow),
+  "grey": ($grey, $white, $grey-shadow),
+  "grey-dark": ($grey-darker, $white, $grey-darker-shadow),
+  "grey-lighter": ($grey-lighter, $black, $grey-lighter-shadow),
+  "success": ($success, $white, $green-shadow),
+  "warning": ($warning, $white, $yellow-shadow),
+  "info": ($info, $white, $cyan-shadow),
+  "danger": ($danger, $white, $red-shadow)
+);
+
+// Default Brand
+$default-brand: (
+  "primary": ($primary, $white, rgba(77, 154, 252, 0.69)),
+  "secondary": ($secondary, $white, rgba(125, 151, 173, 0.65)),
+  "ternary": ($ternary, $white, rgba(1, 133, 205, 0.61)),
+  "gradient": ($bg-primary-default, $white, rgba(77, 154, 252, 0.37)),
+);
+
+// Anhanguera Brand
+$bg-primary-anhanguera: linear-gradient(90deg, #F04F23 0%, #FFEBD3 100%);
+$anhanguera-brand: (
+  "primary": (#F04F23, $white, rgba(240, 79, 35, 0.49)),
+  "secondary": (#F9B165, $white, rgba(249, 177, 101, 0.37)),
+  "ternary": (#FFEBD3, $white, #FFEBD3),
+  "gradient": ($bg-primary-anhanguera, $white, rgba(240, 79, 35, 0.37))
+);
+
+
+$default-brand: map-merge($states-default, $default-brand);
+$anhanguera-brand: map-merge($states-default, $anhanguera-brand);
+
+$states-array-brand: (
+  "default" : $default-brand,
+  "anhanguera" : $anhanguera-brand,
+);
+
+
+// Substituir template do Bootstrap para componentes padrões.
+$theme-colors: (
+        "primary": $primary,
+        "secondary": $secondary,
+        "ternary": $ternary,
+        "white": $white,
+        "black": $black,
+        "dark": $dark,
+        "light": $white,
+        "grey": $grey,
+        "grey-dark": $grey-darker,
+        "grey-lighter": $grey-lighter,
+        "success": $success,
+        "warning": $warning,
+        "info": $info,
+        "danger": $danger
+);
+
+//Grid for typography
+$breakpoints: (
+  col-2: 320px,
+  col-4: 640px,
+  col-6: 960px,
+  col-8: 1280px
+);
+
+@import '~bootstrap/scss/bootstrap';
+@import "../components/all";
+@import "../fonticons/all";
+@import "../variables/all";
+@import "../typography/all";
+@import "../tools/all";

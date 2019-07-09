@@ -1,0 +1,32 @@
+.rsg--logo-5{
+  h1{
+    font-size: 14pt!important;
+  }
+}
+
+footer[class^="rsg--footer"]{
+  display: none !important;
+}
+
+div[class^="rsg--sidebar"] ul ul[class^="rsg--list"] {
+  display: none;
+  opacity: 0;
+}
+
+div[class^="rsg--sidebar"] .vueds-active > ul {
+  opacity: 1!important;
+  display: block!important;
+}
+
+li ul.ul-active-block{
+  opacity: 1!important;
+  display: block!important;
+}
+
+li a[href*="/#/Componentes/components"],
+li a[href*="/#/Componentes/atoms"],
+li a[href*="/#/Componentes/molecules"],
+li a[href*="/#/Componentes/Molecules/v-slider-nav"],
+li a[href*="/#/Componentes/Molecules/v-slider-pagination"] {
+  display: none !important;
+}

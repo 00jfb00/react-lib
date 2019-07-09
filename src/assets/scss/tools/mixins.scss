@@ -1,0 +1,13 @@
+@mixin respond-to($columns) {
+  $breakpoint: "col-#{$columns}";
+  @if map_has_key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @error 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. '
+        + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
